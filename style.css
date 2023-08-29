@@ -1,43 +1,140 @@
 body {
-    background-color: pink;
+    background-color: rgb(192, 191, 191);
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .container {
-width: 50%;
-margin: 0 auto;
-}
-h1 {
-    color: #f0f;
-    font-size: 3rem;
-    border: 0.2rem solid #f0f;
-    padding: 2rem auto 2rem;
-    background-color: azure;
-    border-radius: 10px;
-    text-align: center;
-    width: 75%;
-    margin: 0 auto 3rem auto;
-}
-
-main {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    gap: 2rem;
-    align-items: flex-start;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 0.5em auto;
+    gap: 0.1em;
+    width: 80em;
+    height: 60em;
 }
 
-main div {
-    border: 0.1rem dashed blue;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    background-color: blueviolet;
+.side {
+    /* width: 50%; */
+    width: fit-content;
+    border-radius: 0.5em;
+
 }
 
-h2 {
+.header {
     text-align: center;
 }
-footer {
-    text-align: center;
-    font-style: italic;
-    margin-top: 4rem;
+
+.side_html {
+    background-color: #e44d26;
+    color: #f16529;
 }
+
+.side_css {
+    background-color: #1572b6;
+    color: #33a9dc;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 5em;
+    margin-bottom: 0;
+}
+
+.header p {
+    padding: 1em;
+}
+
+.liste {
+    margin: 0 0;
+    width: fit-content;
+    padding: 1em 1.2em 1em 2em;
+}
+
+.liste_css {
+    position: relative;
+    margin-left: 4em;
+}
+
+.liste_css a {
+    position: relative;
+    color: black;
+}
+
+.main_css {
+    margin-top: 2em;
+    color: black;
+}
+
+.description {
+    position: absolute;
+    left: 13em;
+    width: 13em;
+    top: 0;
+    margin: 0 0 0 2em;
+    padding: 1em;
+    text-align: center;
+    height: fit-content;
+    border-radius: 1em;
+    display: none;
+}
+
+.liste_css li {
+    position: relative;
+}
+
+
+.description2 {
+    z-index: 0;
+    padding: 0 1em;
+    display: block;
+    border: 0;
+}
+/*  */
+.description2:hover{
+    color: pink;
+}
+/*  */
+
+.description1 {
+    background-color: #33a9dce3;
+    z-index: 1;
+}
+
+.triangle {
+    height: 0;
+    width: 0;
+    position: absolute;
+    right: -5em;
+    top: calc(50% - 0.5rem);
+    border-top: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid transparent;
+}
+
+.liste_css a:hover{
+    box-shadow: 4px 8px 15px 0px black;
+    background-color: #33a9dce3;
+    padding: 0.4em;
+    border-radius: 0.3em;
+    z-index: 4;
+    .triangle {
+        border-right: 1.1rem solid #f16529;
+        animation: 0.5s linear 0s infinite alternate move_triangle;
+    }
+    .description1{
+        display: block;
+        box-shadow: 4px 8px 15px 0px black;
+    }
+}
+
+.liste_css a:visited{
+    color: black;
+}
+
+@keyframes move_triangle {
+    from {
+      right: -3em;
+    }
+    to {
+      right: -2.1em;
+    }
+  }
