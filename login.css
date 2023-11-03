@@ -1,0 +1,12 @@
+
+.sectionLogin form{
+    width: 100%;
+    margin: 3rem auto;
+}
+.sectionLogin form input{
+    width: 100%;
+    margin: 1rem 0;
+    height: 2rem;
+    border: 2px solid var(--theme-color);
+    border-radius: 0.5rem;
+}
