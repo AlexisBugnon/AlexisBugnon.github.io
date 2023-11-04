@@ -1,15 +1,49 @@
 :root {
+    /* theme d'origine
     --theme-color: rgb(155, 39, 0);
     --bg-color: #ffe9bf;
     --header-color: rgb(255, 199, 114);
-    --border-cfg : 1px solid rgba(0, 0, 0, 0.137);
+    --border-cfg : 1px solid rgba(0, 0, 0, 0.137); 
+    */
+
+    /*--- autre theme : ----------*/
+    /* --theme-color: rgb(128 38 8); */
+    /* --bg-color: #ac8a4c; */
+    /* --header-color: rgb(255 154 1); */
+    /* --border-cfg: 1px solid rgba(0, 0, 0, 0.137); */
+    /* ---------------------------------*/
+    /*  */
+     /*--- theme background image texture : ----------*/
+     --theme-color: rgb(255 189 0);
+     --bg-color: #ac8a4c;
+     --header-color: rgb(162 155 141);
+     --border-cfg: 1px solid rgba(0, 0, 0, 0.137);
+     --paragraph-color: rgb(255, 255, 255);
+    /* ---------------------------------*/
+    /*  */
+
   }
+
   html{scroll-behavior:smooth}
+
 body{
     background-color: var(--bg-color);
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
+    position: relative;
+}
+p, h1, h2, a{
+    color: var(--paragraph-color);
+}
+
+.sub-body-container{
+ position: absolute;
+ background-image: url("images/texture-bois.jpg");
+ background-size: cover;
+ background-blend-mode: multiply;
+ background-repeat: no-repeat;
+ 
 }
 header{
     display: flex;
@@ -17,7 +51,7 @@ header{
     justify-content: space-between;
     background-color: var(--header-color);
     padding: 0.3rem 0;
-    border-radius: 0 0 0.4rem 0.4rem;
+    /* border-radius: 0 0 0.4rem 0.4rem; */
     width: 100%;
     position: fixed;
     z-index: 1;
@@ -45,6 +79,7 @@ header details{ /* garder celui-ci ou header nav ul mais pas les deux (a priori)
     margin-right: 1rem;
 }
 .container{
+    position: relative;
     margin: 7rem 1.5rem 0 1.5rem;
     letter-spacing: 0.1em;
 }
@@ -62,6 +97,20 @@ header details{ /* garder celui-ci ou header nav ul mais pas les deux (a priori)
     font-weight: bold;
     color: var(--theme-color);
     text-transform: uppercase;
+}
+#image-header{
+    /* 
+    position: absolute;
+    z-index: -1;
+    top: -7rem;
+    left: -1.5rem;
+    background-image: url("images/texture-bois.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 80rem;
+    background-repeat: no-repeat;
+    opacity: 65%;
+    */
 }
 .arrow-down {
     width: 32px;
@@ -81,7 +130,6 @@ header details{ /* garder celui-ci ou header nav ul mais pas les deux (a priori)
     margin: 1rem 0;
     display: block;
     text-decoration: none;
-    color: black;
 }
 /* .afficher-liste-bt:before {
     content: "";
