@@ -31,7 +31,8 @@ body{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
-    position: relative;
+    /* height: 130vh; */
+    /* position: relative; */
 }
 p, h1, h2, a{
     color: var(--paragraph-color);
@@ -40,9 +41,10 @@ p, h1, h2, a{
 .sub-body-container{
  position: absolute;
  background-image: url("images/texture-bois.jpg");
- background-size: cover;
- background-blend-mode: multiply;
+ background-size:auto;
+ /* background-blend-mode: multiply; */
  background-repeat: no-repeat;
+ /* height: 50rem; */
  
 }
 header{
@@ -98,20 +100,7 @@ header details{ /* garder celui-ci ou header nav ul mais pas les deux (a priori)
     color: var(--theme-color);
     text-transform: uppercase;
 }
-#image-header{
-    /* 
-    position: absolute;
-    z-index: -1;
-    top: -7rem;
-    left: -1.5rem;
-    background-image: url("images/texture-bois.jpg");
-    background-size: cover;
-    width: 100vw;
-    height: 80rem;
-    background-repeat: no-repeat;
-    opacity: 65%;
-    */
-}
+
 .arrow-down {
     width: 32px;
     height: 20px;
@@ -130,6 +119,7 @@ header details{ /* garder celui-ci ou header nav ul mais pas les deux (a priori)
     margin: 1rem 0;
     display: block;
     text-decoration: none;
+    
 }
 /* .afficher-liste-bt:before {
     content: "";
@@ -141,33 +131,17 @@ header details{ /* garder celui-ci ou header nav ul mais pas les deux (a priori)
     border-bottom: 3px solid #000;
   } */
 
-.liste-bt details{
-    margin-top: 1rem;
-    background-color: white;
-    border: 2px solid var(--theme-color);
-    /* padding: 1rem; */
-    border-radius: 0.5rem;
-}
-details summary{
-    list-style: none;
-    text-align: center;
-    cursor: pointer;
-    height: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
+.liste-bt{
+    height: 30rem;
 }
 footer{
-    margin-top: 20rem;
+    /* margin-top: 8rem; */
     font-size: 0.8rem;
     text-align: center;
     background-color: var(--header-color);
-    height: 5rem;
+    height: 4rem;
     border-top: var(--border-cfg);
 }
-
-
 
 
 /* ----- Test de composant maison ----- */
@@ -176,9 +150,11 @@ footer{
     font-size: 1rem;
     margin: 0;
     height: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    line-height: 2;
+    width: 100%;
     cursor: pointer;
 }
 .composant h3:active{
@@ -190,6 +166,7 @@ footer{
     background-color: white;
     border: 2px solid var(--theme-color);
     border-radius: 0.5rem;
+    
 }
 
 .composant .composant-content{
@@ -201,6 +178,7 @@ footer{
 .composant.--displayed h3{
     background-color: var(--theme-color);
     color: var(--bg-color);
+    border-radius: 0.5rem 0.5rem 0 0;
 }
 .composant .composant-content article h4{
     margin-bottom: 0;
@@ -214,10 +192,17 @@ footer{
 }
 
 .composant.--displayed{
-    /* position: absolute;
-    z-index: 1;
-    left: 0;
-    top: 4rem;
-    overflow-y:scroll; */
+    overflow-y: scroll;
+    height: 88vh;
+    position: fixed;
+    top: 3rem;
+    left: 5%;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.986);
+}
+
+.composant.--displayed h3{
+    position: fixed;
+    width: 90%;
 }
 /* ------ fin du test --------   */

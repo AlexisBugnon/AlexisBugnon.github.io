@@ -4,9 +4,9 @@ const menuDeroulant = {
 
     init: function () {
         const elementsDeroulant = document.querySelectorAll('.composant h3');
-        const elementListAction = document.querySelector('.afficher-liste-bt')
+        // const elementListAction = document.querySelector('.afficher-liste-bt')
 
-        elementListAction.addEventListener('click', menuDeroulant.handleListActionCliked);
+        // elementListAction.addEventListener('click', menuDeroulant.handleListActionCliked);
 
         for (const element of elementsDeroulant) {
             element.addEventListener('click', menuDeroulant.handleComposantClicked);
@@ -52,7 +52,6 @@ const menuDeroulant = {
             afficherListe.classList.remove('--displayedAll');
             afficherListe.textContent = 'Afficher tous les Ball-traps';
         }
-        console.log(menuDeroulant.numberComposantDisplayed);
     }
 
 }
