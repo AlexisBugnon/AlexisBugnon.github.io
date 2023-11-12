@@ -1,0 +1,28 @@
+use App\Models\Task;
+use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
+
+public function listMonths()
+{
+    // Supposons que la table des tâches (Task) contient des dates telles que "2023-11-15", "2023-11-22", "2023-12-10", etc.
+
+    // Obtenez l'année actuelle
+    $currentYear = Carbon::now()->year;
+
+    // Ajoutez une clause WHERE pour filtrer les tâches pour l'année en cours
+    $months = Task::whereYear('date', $currentYear)
+        ->select(DB::raw('DISTINCT DATE_FORMAT(date, "%m-%Y") as monthYear'))
+        ->pluck('monthYear');
+
+    // Supposons que $months contient maintenant un tableau comme ["11-2023", "12-2023"]
+
+    // Transformez les mois en un format plus convivial si nécessaire
+    $formattedMonths = $months->map(function ($month) {
+        return \Carbon\Carbon::createFromFormat('m-Y', $month)->format('F Y');
+    });
+
+    // Supposons que $formattedMonths contient maintenant un tableau comme ["November 2023", "December 2023"]
+
+    // Faites quelque chose avec les mois récupérés
+    return view('votre_vue')->with('months', $formattedMonths);
+}

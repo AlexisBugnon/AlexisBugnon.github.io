@@ -1,0 +1,8 @@
+BALL_TRAPS: id, ville, organisation, affiche, adresse_ball_trap, contenu_principal, organisateur_id, restauration, status, created_at, updated_at
+APPARTIEN, 11 DATES, 1N BALL_TRAPS
+DATES: id, date, horaire, ball_trap_id, user_id, status, created_at, updated_at
+LIE, 11 DATES, 1N USERS
+USERS: id, email, password, firstname, lastname,  role,  status, created_at, updated_at
+
+
+

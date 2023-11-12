@@ -1,0 +1,25 @@
+{
+  "width": 548,
+  "height": 238,
+  "cx": [
+    [ "BALL_TRAPS", 69 ],
+    [ "APPARTIEN", 203 ],
+    [ "DATES", 319 ],
+    [ "LIE", 410 ],
+    [ "USERS", 499 ]
+  ],
+  "cy": [
+    [ "BALL_TRAPS", 119 ],
+    [ "APPARTIEN", 119 ],
+    [ "DATES", 119 ],
+    [ "LIE", 119 ],
+    [ "USERS", 119 ]
+  ],
+  "shift": [
+    [ "APPARTIEN,DATES,0", 0 ],
+    [ "APPARTIEN,BALL_TRAPS,0", 0 ],
+    [ "LIE,DATES,0", 0 ],
+    [ "LIE,USERS,0", 0 ]
+  ],
+  "ratio": []
+}
